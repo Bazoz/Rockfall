@@ -27,7 +27,14 @@
 *.out
 *.app
 
-Debug/
+**/x64
 
+<<<<<<< HEAD
+=======
+
+**/Debug
+
+
+>>>>>>> Yarik
 *.sdf
 *.opensdf
