@@ -5,12 +5,11 @@ void main()
 {
 	
 	int a;
-<<<<<<< HEAD
+
 	cin >> a;
 
-	cout << a << "Hello" << endl;
-=======
->>>>>>> Dev
+	cout << a << "Hello1" << endl;
+
 
 
 }
