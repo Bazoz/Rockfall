@@ -13,7 +13,7 @@ AllegroView::AllegroView()
 }
 
 
-void AllegroView::Initialize(int width, int height, int r, int g, int b)
+void AllegroView::Initialize(int width, int height)
 {
 
 	if (!al_init())     //Инициализация библиотеки
@@ -39,15 +39,85 @@ void AllegroView::Initialize(int width, int height, int r, int g, int b)
 		throw "Install keyboard error!";
 	}
 
+	if (!al_init_font_addon())
+	{
+		throw "Font init error!";
+	}
 
-	backgroundColor.r = r;
-	backgroundColor.b = b;
-	backgroundColor.g = g;
-	backgroundColor.a = 0;
+	if (!al_init_ttf_addon())
+	{
+		throw "Ttf init error!";
+	}
+
+	timer = al_create_timer(1.0 / fpsTimeout);
+
+	if (timer == nullptr)
+	{
+		throw "Timer creation error!";
+	}
 
 	
 
+	eventQueu = al_create_event_queue();
+	if (eventQueu == nullptr)
+	{
+		throw "Event queue creation error!";
+	}
+
+	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg"); //Подключение картинки
+	
+	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 25, 0);
+
+	if (backgroundImage == nullptr)
+	{
+		throw "Load image error!";
+	}
+
+	al_set_target_bitmap(al_get_backbuffer(display));
+
+
+	
+	al_register_event_source(eventQueu, al_get_timer_event_source(timer)); 
+	al_register_event_source(eventQueu, al_get_display_event_source(display));
+	al_register_event_source(eventQueu, al_get_keyboard_event_source());
+
+
+	currentView = new MainMenuView(width, height, backgroundImage, mainFont);
+
+
 }
+
+void AllegroView::StartGame()
+{
+	al_start_timer(timer);
+	ALLEGRO_EVENT ev;
+	
+	//al_convert_mask_to_alpha(mainAtlas, al_map_rgb(0, 0, 0));
+
+
+	while (true) //главный цыкл преложения
+	{
+		al_wait_for_event(eventQueu, &ev);
+
+
+		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueu))
+		{
+			currentView->Update();
+			
+			al_flip_display();
+
+		}
+
+		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
+		{
+			break;
+		}
+	}
+}
+
+
+
+
 
 
 AllegroView::~AllegroView()

@@ -11,7 +11,9 @@ void main()
 		try
 		{
 			AllegroView all;
-			all.Initialize(758, 530, 1, 1, 1);
+			all.Initialize(395,720);
+
+			all.StartGame();
 
 		}
 		catch (char *massage)
