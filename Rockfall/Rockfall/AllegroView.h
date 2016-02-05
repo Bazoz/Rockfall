@@ -14,6 +14,8 @@ class AllegroView
 
 	BaseView* currentView;
 
+	BaseView** views;
+
 	int width;
 	int height;
 

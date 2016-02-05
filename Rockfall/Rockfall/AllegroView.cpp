@@ -70,7 +70,7 @@ void AllegroView::Initialize(int width, int height)
 
 	if (backgroundImage == nullptr)
 	{
-		throw "Load image error!";
+		throw "Load image error!";  
 	}
 
 	al_set_target_bitmap(al_get_backbuffer(display));
