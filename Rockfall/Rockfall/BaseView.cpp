@@ -6,7 +6,8 @@ BaseView::BaseView(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLE
 {
 	this->width;
 	this->height;
-	this->backgroundImage= backgroundImage;;
-	this->mainFont= mainFont;
+	this->backgroundImage = backgroundImage;
+	this->mainFont = mainFont;
 
 }
+

@@ -2,6 +2,8 @@
 #include "AllegroHeader.h"
 #include "Header.h"
 #include "MainMenuView.h"
+#include "CoreEnumerations.h"
+#include "SettingView.h"
 
 class AllegroView
 {

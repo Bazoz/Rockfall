@@ -1,5 +1,7 @@
 #pragma once
 #include "AllegroHeader.h"
+#include "CoreEnumerations.h"
+
 
 
 class BaseView
@@ -11,6 +13,7 @@ protected:
 
 	ALLEGRO_BITMAP* backgroundImage;
 	ALLEGRO_FONT* mainFont;
+	
 	
 
 

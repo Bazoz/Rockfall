@@ -66,7 +66,7 @@ void AllegroView::Initialize(int width, int height)
 
 	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg"); //Подключение картинки
 	
-	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 25, 0);
+	//mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 25, 0);
 
 	if (backgroundImage == nullptr)
 	{
@@ -82,7 +82,8 @@ void AllegroView::Initialize(int width, int height)
 	al_register_event_source(eventQueu, al_get_keyboard_event_source());
 
 
-	currentView = new MainMenuView(width, height, backgroundImage, mainFont);
+	//currentView = new MainMenuView(width, height, backgroundImage, mainFont);
+	//currentView = new Setting(width, height, backgroundImage, mainFont);
 
 
 }
