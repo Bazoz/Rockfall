@@ -9,7 +9,7 @@ class AllegroView
 {
 	ALLEGRO_DISPLAY *display;
 	ALLEGRO_TIMER *timer;
-	ALLEGRO_EVENT_QUEUE *eventQueu;
+	ALLEGRO_EVENT_QUEUE *eventQueue;
 
 	ALLEGRO_BITMAP *backgroundImage;
 	ALLEGRO_FONT* mainFont;

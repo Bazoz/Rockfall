@@ -12,7 +12,7 @@ MainMenuView::MainMenuView(int width, int height)
 
 
 
-ViewType MainMenuView::CheckSwitchViev(int x, int y)
+ViewType MainMenuView::CheckSwitchView(int x, int y)
 {
 
 	if (x >= 22 && x<=71 && y >=640 && y<= 690)

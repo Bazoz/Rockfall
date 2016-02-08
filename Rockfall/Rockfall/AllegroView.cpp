@@ -6,7 +6,7 @@ AllegroView::AllegroView()
 {
 	display = nullptr;
 	timer = nullptr;
-	eventQueu = nullptr;
+	eventQueue = nullptr;
 	backgroundImage = nullptr;
 	bouncer_x = 0;
 	bouncer_y = 0;
@@ -65,8 +65,8 @@ void AllegroView::Initialize(int width, int height)
 		throw "Timer creation error!";
 	}
 
-	eventQueu = al_create_event_queue();
-	if (eventQueu == nullptr)
+	eventQueue = al_create_event_queue();
+	if (eventQueue == nullptr)
 	{
 		throw "Event queue creation error!";
 	}
@@ -85,10 +85,10 @@ void AllegroView::Initialize(int width, int height)
 
 
 	
-	al_register_event_source(eventQueu, al_get_timer_event_source(timer)); 
-	al_register_event_source(eventQueu, al_get_display_event_source(display));
-	al_register_event_source(eventQueu, al_get_keyboard_event_source());
-	al_register_event_source(eventQueu, al_get_mouse_event_source());
+	al_register_event_source(eventQueue, al_get_timer_event_source(timer)); 
+	al_register_event_source(eventQueue, al_get_display_event_source(display));
+	al_register_event_source(eventQueue, al_get_keyboard_event_source());
+	al_register_event_source(eventQueue, al_get_mouse_event_source());
 
 
 	
@@ -110,7 +110,7 @@ void AllegroView::StartGame()
 
 	while (true) //главный цыкл преложения
 	{
-		al_wait_for_event(eventQueu, &ev);
+		al_wait_for_event(eventQueue, &ev);
 
 		//currentView = views[(int)ViewType::SettingMenu];
 		
@@ -119,11 +119,11 @@ void AllegroView::StartGame()
 			bouncer_x = ev.mouse.x;
 			bouncer_y = ev.mouse.y;
 			
-			currentView = views[(int)currentView->CheckSwitchViev(bouncer_x, bouncer_y)];
+			currentView = views[(int)currentView->CheckSwitchView(bouncer_x, bouncer_y)];
 			
 		}
 
-		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueu))
+		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueue))
 		{
 	
 			currentView->Update();
@@ -157,9 +157,9 @@ AllegroView::~AllegroView()
 		al_destroy_timer(timer);
 	}
 
-	if (eventQueu != nullptr)
+	if (eventQueue != nullptr)
 	{
-		al_destroy_event_queue(eventQueu);
+		al_destroy_event_queue(eventQueue);
 	}
 
 
