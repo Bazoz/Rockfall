@@ -83,7 +83,7 @@ void AllegroView::Initialize(int width, int height)
 
 
 	//currentView = new MainMenuView(width, height, backgroundImage, mainFont);
-	//currentView = new Setting(width, height, backgroundImage, mainFont);
+	currentView = new Setting(width, height, backgroundImage, mainFont);
 
 
 }
