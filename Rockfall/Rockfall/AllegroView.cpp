@@ -93,8 +93,8 @@ void AllegroView::Initialize(int width, int height)
 
 	
 	//currentView = new Setting(width, height, backgroundImage, mainFont);
-	views[(int)ViewType::MainMenu] = new MainMenuView(width, height, backgroundImage, mainFont);
-	views[(int)ViewType::SettingMenu] = new SettingMenu(width, height, backgroundImage, mainFont);
+	views[(int)ViewType::MainMenu] = new MainMenuView(width, height);
+	views[(int)ViewType::SettingMenu] = new SettingMenu(width, height);
 	currentView = views[(int)ViewType::MainMenu];
 
 
@@ -113,7 +113,15 @@ void AllegroView::StartGame()
 		al_wait_for_event(eventQueu, &ev);
 
 		//currentView = views[(int)ViewType::SettingMenu];
-
+		
+		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
+		{
+			bouncer_x = ev.mouse.x;
+			bouncer_y = ev.mouse.y;
+			
+			currentView = views[(int)currentView->CheckSwitchViev(bouncer_x, bouncer_y)];
+			
+		}
 
 		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueu))
 		{
@@ -123,16 +131,6 @@ void AllegroView::StartGame()
 			al_flip_display();
 
 		}
-		
-		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
-		{
-			bouncer_x = ev.mouse.x;
-			bouncer_y = ev.mouse.y;
-
-			currentView = views[(int)currentView->CheckSwitchViev(bouncer_x, bouncer_y)];
-			
-		}
-
 
 		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
 		{

@@ -2,11 +2,11 @@
 
 
 
-BaseView::BaseView(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont)
+BaseView::BaseView(int width, int height, ALLEGRO_BITMAP * backgroundImage)
 {
 	this->width;
 	this->height;
 	this->backgroundImage = backgroundImage;
-	this->mainFont = mainFont;
+
 
 }

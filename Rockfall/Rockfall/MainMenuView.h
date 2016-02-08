@@ -4,9 +4,10 @@
 
 class MainMenuView : public BaseView
 {
-
+	ALLEGRO_BITMAP *settingsButtonNormal;
+	ALLEGRO_BITMAP *settingsButtonPushed;
 public:
-	MainMenuView(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont);
+	MainMenuView(int width, int height);
 	virtual void Update();
 	ViewType CheckSwitchViev(int x, int y) ;
 

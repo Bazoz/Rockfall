@@ -2,17 +2,17 @@
 
 
 
-SettingMenu::SettingMenu(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont)
-	:BaseView(width, height, backgroundImage, mainFont)
+SettingMenu::SettingMenu(int width, int height)
+	:BaseView(width, height, backgroundImage)
 {
-	
+	backgroundImage = al_load_bitmap("Resources/Images/Settings.jpg");
 }
 
 
 
 ViewType SettingMenu::CheckSwitchViev(int x, int y)
 {
-	backgroundImage = al_load_bitmap("Resources/Images/Settings.jpg");
+	
 	if (x >= 8 && x <= 61 && y >= 7 && y <= 38)
 	{
 		return ViewType::MainMenu;

@@ -18,7 +18,7 @@ protected:
 
 public:
 
-	BaseView(int width, int height,ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont);
+	BaseView(int width, int height,ALLEGRO_BITMAP * backgroundImage);
 	virtual void Update() = 0;
 	virtual ViewType CheckSwitchViev(int x, int y) = 0;
 

@@ -2,18 +2,18 @@
 
 
 
-MainMenuView::MainMenuView(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont)
-	:BaseView( width, height, backgroundImage, mainFont)
+MainMenuView::MainMenuView(int width, int height)
+	:BaseView( width, height, backgroundImage)
 {
-	
+	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg");
+
+
 }
 
 
 
 ViewType MainMenuView::CheckSwitchViev(int x, int y)
 {
-	
-	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg");
 
 	if (x >= 22 && x<=71 && y >=640 && y<= 690)
 	{
