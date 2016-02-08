@@ -4,7 +4,7 @@
 
 
 
-class BaseView
+class BaseView 
 {
 
 protected:
@@ -14,12 +14,13 @@ protected:
 	ALLEGRO_BITMAP* backgroundImage;
 	ALLEGRO_FONT* mainFont;
 	
-	
 
 
 public:
 
 	BaseView(int width, int height,ALLEGRO_BITMAP * backgroundImage, ALLEGRO_FONT * mainFont);
 	virtual void Update() = 0;
+	virtual ViewType CheckSwitchViev(int x, int y) = 0;
+
 };
 

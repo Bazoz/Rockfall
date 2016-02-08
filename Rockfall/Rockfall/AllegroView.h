@@ -5,7 +5,7 @@
 #include "CoreEnumerations.h"
 #include "SettingView.h"
 
-class AllegroView
+class AllegroView 
 {
 	ALLEGRO_DISPLAY *display;
 	ALLEGRO_TIMER *timer;
@@ -16,12 +16,15 @@ class AllegroView
 
 	BaseView* currentView;
 
-	BaseView** views;
+	BaseView** views ;
 
 	int width;
 	int height;
 
 	int fpsTimeout;
+
+	int bouncer_x;
+	int bouncer_y;
 
 
 public:

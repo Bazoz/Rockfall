@@ -10,4 +10,3 @@ BaseView::BaseView(int width, int height, ALLEGRO_BITMAP * backgroundImage, ALLE
 	this->mainFont = mainFont;
 
 }
-
