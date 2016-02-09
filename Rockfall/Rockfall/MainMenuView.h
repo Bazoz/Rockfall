@@ -9,7 +9,7 @@ class MainMenuView : public BaseView
 public:
 	MainMenuView(int width, int height);
 	virtual void Update();
-	ViewType CheckSwitchViev(int x, int y) ;
+	ViewType CheckSwitchView(int x, int y) ;
 
 	~MainMenuView();
 

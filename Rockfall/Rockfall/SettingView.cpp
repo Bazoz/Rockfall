@@ -10,7 +10,7 @@ SettingMenu::SettingMenu(int width, int height)
 
 
 
-ViewType SettingMenu::CheckSwitchViev(int x, int y)
+ViewType SettingMenu::CheckSwitchView(int x, int y)
 {
 	
 	if (x >= 8 && x <= 61 && y >= 7 && y <= 38)
