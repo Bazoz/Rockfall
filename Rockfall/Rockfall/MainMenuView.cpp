@@ -15,16 +15,22 @@ MainMenuView::MainMenuView(int width, int height)
 ViewType MainMenuView::CheckSwitchView(int x, int y)
 {
 
-	if (x >= 22 && x<=71 && y >=640 && y<= 690)
+	if (x >= 30 && x<=83 && y >=675 && y<= 727)
 	{
 		return ViewType::SettingMenu;
 	}
 	
 	return ViewType::MainMenu;
 }
+//
+//void GameView::ProcessEvent(ALLEGRO_EVENT* ev)
+//{
+//	PlayerRoket->Setdirection(currectDirection->GetDirection());
+//}
 
 void MainMenuView::Update()
 {
+
 	al_draw_bitmap(backgroundImage, 0, 0, 0);
 	
 

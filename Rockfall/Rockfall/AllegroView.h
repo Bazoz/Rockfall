@@ -13,10 +13,11 @@ class AllegroView
 
 	ALLEGRO_BITMAP *backgroundImage;
 	ALLEGRO_FONT* mainFont;
+	ALLEGRO_BITMAP *mainAtlas;
 
 	BaseView* currentView;
-
 	BaseView** views ;
+
 
 	int width;
 	int height;
@@ -25,6 +26,7 @@ class AllegroView
 
 	int bouncer_x;
 	int bouncer_y;
+
 
 
 public:

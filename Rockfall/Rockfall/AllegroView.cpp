@@ -73,13 +73,14 @@ void AllegroView::Initialize(int width, int height)
 	
 
 	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg"); //Подключение картинки
-	
-	//mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 25, 0);
 
-	if (backgroundImage == nullptr)
+	mainAtlas = al_load_bitmap("Resources/Images/Atlas.png");
+
+	if (backgroundImage == nullptr || mainAtlas == nullptr)
 	{
-		throw "Load image error!";  
+		throw "Load image error!";
 	}
+
 
 	al_set_target_bitmap(al_get_backbuffer(display));
 
@@ -107,18 +108,21 @@ void AllegroView::StartGame()
 	
 	//al_convert_mask_to_alpha(mainAtlas, al_map_rgb(0, 0, 0));
 
+	//currentView->RocessEvent(ev);
+
+	al_convert_mask_to_alpha(mainAtlas, al_map_rgb(140, 0, 165));
 
 	while (true) //главный цыкл преложения
 	{
 		al_wait_for_event(eventQueue, &ev);
 
-		//currentView = views[(int)ViewType::SettingMenu];
 		
-		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
+		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
 		{
 			bouncer_x = ev.mouse.x;
 			bouncer_y = ev.mouse.y;
 			
+
 			currentView = views[(int)currentView->CheckSwitchView(bouncer_x, bouncer_y)];
 			
 		}
