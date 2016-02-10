@@ -117,13 +117,12 @@ void AllegroView::StartGame()
 		al_wait_for_event(eventQueue, &ev);
 
 		
-		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
+		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
 			bouncer_x = ev.mouse.x;
 			bouncer_y = ev.mouse.y;
 			
-
-			currentView = views[(int)currentView->CheckSwitchView(bouncer_x, bouncer_y)];
+			views[(int)currentView->CheckSwitchView(bouncer_x, bouncer_y)];
 			
 		}
 
@@ -131,7 +130,9 @@ void AllegroView::StartGame()
 		{
 	
 			currentView->Update();
-			
+			ViewType type = currentView->GetViewState();
+			currentView = views[(int)type];
+			currentView->ShowMenu();
 			al_flip_display();
 
 		}

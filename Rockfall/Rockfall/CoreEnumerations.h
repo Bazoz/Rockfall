@@ -6,3 +6,5 @@ enum class ViewType
 	SettingMenu  = 1,
 
 };
+
+

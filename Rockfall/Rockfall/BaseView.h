@@ -15,12 +15,15 @@ protected:
 	ALLEGRO_FONT* mainFont;
 	
 
+	ViewType viewState;
 
 public:
 
 	BaseView(int width, int height,ALLEGRO_BITMAP * backgroundImage);
 	virtual void Update() = 0;
 	virtual ViewType CheckSwitchView(int x, int y) = 0;
+	virtual void ShowMenu() = 0;
+	ViewType GetViewState();
 
 };
 

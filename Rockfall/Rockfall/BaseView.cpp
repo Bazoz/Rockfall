@@ -10,3 +10,8 @@ BaseView::BaseView(int width, int height, ALLEGRO_BITMAP * backgroundImage)
 
 
 }
+
+ViewType BaseView::GetViewState()
+{
+	return viewState;
+}

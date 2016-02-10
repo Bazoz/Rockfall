@@ -10,18 +10,23 @@ MainMenuView::MainMenuView(int width, int height)
 
 }
 
-
+void MainMenuView::ShowMenu()
+{
+	viewState = ViewType::MainMenu;
+}
 
 ViewType MainMenuView::CheckSwitchView(int x, int y)
 {
 
 	if (x >= 30 && x<=83 && y >=675 && y<= 727)
 	{
-		return ViewType::SettingMenu;
+		viewState = ViewType::SettingMenu;
+		return ViewType::MainMenu;
 	}
-	
+	viewState = ViewType::MainMenu;
 	return ViewType::MainMenu;
 }
+
 //
 //void GameView::ProcessEvent(ALLEGRO_EVENT* ev)
 //{

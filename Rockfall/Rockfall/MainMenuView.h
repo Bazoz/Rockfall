@@ -13,6 +13,7 @@ public:
 	MainMenuView(int width, int height);
 	virtual void Update();
 	ViewType CheckSwitchView(int x, int y) ;
+	void ShowMenu();
 
 	~MainMenuView();
 
