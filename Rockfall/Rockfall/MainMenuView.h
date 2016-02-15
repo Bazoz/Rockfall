@@ -17,7 +17,7 @@ public:
 	virtual void Update();
 	ViewType CheckSwitchView(int x, int y) ;
 
-	void ShowMenus();
+	void ShowMenu();
 
 	~MainMenuView();
 

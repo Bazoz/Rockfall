@@ -8,9 +8,9 @@ MainMenuView::MainMenuView(int width, int height)
 	backgroundImage = al_load_bitmap("Resources/Images/Main.png");
 	settingsButtonPushed = al_load_bitmap("Resources/Images/Atlas.png");
 
-	settingButtonImage = al_create_sub_bitmap(settingsButtonNormal, 93, 232, 140, 279);
+	settingButtonImage = al_create_sub_bitmap(settingsButtonPushed, 93, 232, 140, 279);
 
-	settingButtonImagePush = al_create_sub_bitmap(settingsButtonNormal, 93, 284, 140, 330);
+	settingButtonImagePush = al_create_sub_bitmap(settingsButtonPushed, 93, 284, 140, 330);
 }
 
 
@@ -28,7 +28,7 @@ ViewType MainMenuView::CheckSwitchView(int x, int y)
 	return viewState;
 }
 
-void MainMenuView::ShowMenus()
+void MainMenuView::ShowMenu()
 {
 	viewState = ViewType::MainMenu;
 }
