@@ -11,7 +11,7 @@ void main()
 		try
 		{
 			AllegroView all;
-			all.Initialize(432,768);
+			all.Initialize(383,680);
 
 			all.StartGame();
 
