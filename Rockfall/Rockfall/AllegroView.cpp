@@ -72,7 +72,7 @@ void AllegroView::Initialize(int width, int height)
 	}
 	
 
-	backgroundImage = al_load_bitmap("Resources/Images/Main.jpg"); //Подключение картинки
+	backgroundImage = al_load_bitmap("Resources/Images/Main.png"); //Подключение картинки
 
 	mainAtlas = al_load_bitmap("Resources/Images/Atlas.png");
 
@@ -94,7 +94,7 @@ void AllegroView::Initialize(int width, int height)
 
 	
 	//currentView = new Setting(width, height, backgroundImage, mainFont);
-	views[(int)ViewType::MainMenu] = new MainMenuView(width, height);
+	views[(int)ViewType::MainMenu] = new MainMenuView(width, height) ;
 	views[(int)ViewType::SettingMenu] = new SettingMenu(width, height);
 	currentView = views[(int)ViewType::MainMenu];
 
@@ -110,7 +110,7 @@ void AllegroView::StartGame()
 
 	//currentView->RocessEvent(ev);
 
-	al_convert_mask_to_alpha(mainAtlas, al_map_rgb(140, 0, 165));
+	al_convert_mask_to_alpha(mainAtlas, al_map_rgb(36, 255, 0));
 
 	while (true) //главный цыкл преложения
 	{
