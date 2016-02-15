@@ -9,9 +9,9 @@ SettingMenu::SettingMenu(int width, int height)
 
 	settingsButtonNormal = al_load_bitmap("Resources/Images/Atlas.png");
 
-	backButtonImage = al_create_sub_bitmap(settingsButtonNormal, 92, 4, 142, 33);
+	backButtonImage = al_create_sub_bitmap(settingsButtonNormal, 92, 4, 47, 29);
 
-	backButtonImagePused = al_create_sub_bitmap(settingsButtonNormal, 151, 4, 200, 33);
+	backButtonImagePused = al_create_sub_bitmap(settingsButtonNormal, 151, 4, 47, 29);
 }
 
 
@@ -20,7 +20,7 @@ ViewType SettingMenu::CheckSwitchView(int x, int y)
 {
 	if (x >= 15 && x <= 65 && y >= 9 && y <= 39)
 	{				
-		backButtonTimeout = 5;
+		backButtonTimeout = 7;
 		return ViewType::SettingMenu;
 	}
 

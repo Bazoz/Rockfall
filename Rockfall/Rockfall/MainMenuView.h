@@ -10,7 +10,12 @@ class MainMenuView : public BaseView
 	ALLEGRO_BITMAP * settingButtonImage;
 	ALLEGRO_BITMAP * settingButtonImagePush;
 
-	int backButtonTimeout;
+	ALLEGRO_BITMAP * SoundButtonImage;
+	ALLEGRO_BITMAP * SoundButtonImagePush;
+
+
+	int SettingButtonTimeout;
+	bool isOn = true;
 
 public:
 	MainMenuView(int width, int height);
