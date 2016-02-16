@@ -14,7 +14,6 @@ protected:
 	ALLEGRO_BITMAP* backgroundImage;
 	ALLEGRO_FONT* mainFont;
 	
-
 	ViewType viewState;
 
 public:
@@ -24,6 +23,8 @@ public:
 	virtual ViewType CheckSwitchView(int x, int y) = 0;
 	virtual void ShowMenu() = 0;
 	ViewType GetViewState();
+
+	//virtual void EventHandler(ALLEGRO_EVENT &ev) = 0;// для 
 
 };
 

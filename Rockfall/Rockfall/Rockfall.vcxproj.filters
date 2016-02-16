@@ -19,11 +19,11 @@
     <Filter Include="View\Core">
       <UniqueIdentifier>{491be279-a1bb-4095-b3d9-b55812e1a254}</UniqueIdentifier>
     </Filter>
-    <Filter Include="View\Core\MenuView">
-      <UniqueIdentifier>{959c476f-7898-481a-8ffa-208971871e8f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameCore">
       <UniqueIdentifier>{0335386b-96ed-49f4-9996-dd9ff730bbc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\MenuView">
+      <UniqueIdentifier>{959c476f-7898-481a-8ffa-208971871e8f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,14 +33,11 @@
     <ClCompile Include="Source.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="BaseView.cpp">
-      <Filter>View\Core</Filter>
-    </ClCompile>
     <ClCompile Include="MainMenuView.cpp">
-      <Filter>View\Core\MenuView</Filter>
+      <Filter>View\MenuView</Filter>
     </ClCompile>
     <ClCompile Include="SettingView.cpp">
-      <Filter>View\Core\MenuView</Filter>
+      <Filter>View\MenuView</Filter>
     </ClCompile>
     <ClCompile Include="Rock.cpp">
       <Filter>GameCore</Filter>
@@ -57,6 +54,15 @@
     <ClCompile Include="GameLevel.cpp">
       <Filter>GameCore</Filter>
     </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -68,17 +74,11 @@
     <ClInclude Include="AllegroView.h">
       <Filter>View\Core</Filter>
     </ClInclude>
-    <ClInclude Include="CoreEnumerations.h">
-      <Filter>View\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseView.h">
-      <Filter>View\Core</Filter>
-    </ClInclude>
     <ClInclude Include="SettingView.h">
-      <Filter>View\Core\MenuView</Filter>
+      <Filter>View\MenuView</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuView.h">
-      <Filter>View\Core\MenuView</Filter>
+      <Filter>View\MenuView</Filter>
     </ClInclude>
     <ClInclude Include="Rock.h">
       <Filter>GameCore</Filter>
@@ -94,6 +94,18 @@
     </ClInclude>
     <ClInclude Include="GameLevel.h">
       <Filter>GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreEnumerations.h">
+      <Filter>View</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
