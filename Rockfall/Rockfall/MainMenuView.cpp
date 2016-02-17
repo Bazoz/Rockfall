@@ -35,7 +35,7 @@ ViewType MainMenuView::CheckSwitchView(int x, int y)
 	//--------настройки
 	if (x >= 29 && x <= 75 && y >= 598 && y <= 646)
 	{
-		SettingButtonTimeout = 15;
+		SettingButtonTimeout = 7;
 		return ViewType::MainMenu;
 	}
 
@@ -50,28 +50,28 @@ ViewType MainMenuView::CheckSwitchView(int x, int y)
 	//--------статус
 	if (x >= 322 && x <= 370 && y >= 525 && y <= 572)
 	{
-		StatusButtonTimeout = 15;
+		StatusButtonTimeout = 7;
 		return ViewType::MainMenu;
 	}
 
 	//--------магазин
 	if (x >= 322 && x <= 368 && y >= 598 && y <= 644)
 	{
-		StorButtonTimeout = 15;
+		StorButtonTimeout = 7;
 		return ViewType::MainMenu;
 	}
 
 	//--------левел
 	if (x >= 113 && x <= 290 && y >= 551 && y <= 598)
 	{
-		LevelButtonTimeout = 15;
+		LevelButtonTimeout = 7;
 		return ViewType::MainMenu;
 	}
 
 	//--------плей
 	if (x >= 94 && x <= 311 && y >= 279 && y <= 494)
 	{
-		PlayButtonTimeout = 15;
+		PlayButtonTimeout = 7;
 		return ViewType::MainMenu;
 	}
 
@@ -87,26 +87,6 @@ void MainMenuView::ShowMenu()
 
 void MainMenuView::Update()
 {
-
-	al_convert_mask_to_alpha(settingButtonImage, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(settingButtonImagePush, al_map_rgb(36, 255, 0));
-
-	al_convert_mask_to_alpha(SoundButtonImagePush, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(SoundButtonImage, al_map_rgb(36, 255, 0));
-
-	al_convert_mask_to_alpha(StatusButtonImagePush, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(StatusButtonImage, al_map_rgb(36, 255, 0));
-
-	al_convert_mask_to_alpha(StorButtonImagePush, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(StorButtonImage, al_map_rgb(36, 255, 0));
-
-	al_convert_mask_to_alpha(LevelButtonImagePush, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(LevelButtonImage, al_map_rgb(36, 255, 0));
-
-	al_convert_mask_to_alpha(PlayButtonImagePush, al_map_rgb(36, 255, 0));
-	al_convert_mask_to_alpha(PlayButtonImage, al_map_rgb(36, 255, 0));
-
-
 	al_draw_bitmap(backgroundImage, 0, 0, 0);
 	
 	//-----Кнока звука

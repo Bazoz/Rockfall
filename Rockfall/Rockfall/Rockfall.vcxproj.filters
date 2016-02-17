@@ -107,6 +107,9 @@
     <ClInclude Include="CoreEnumerations.h">
       <Filter>View</Filter>
     </ClInclude>
+    <ClInclude Include="GameEnumeration.h">
+      <Filter>GameCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

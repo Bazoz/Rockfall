@@ -4,6 +4,7 @@
 #include "MainMenuView.h"
 #include "CoreEnumerations.h"
 #include "SettingView.h"
+#include "Rock.h"
 
 class AllegroView 
 {

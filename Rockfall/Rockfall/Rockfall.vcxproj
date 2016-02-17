@@ -194,6 +194,7 @@
     <ClInclude Include="AllegroView.h" />
     <ClInclude Include="BaseView.h" />
     <ClInclude Include="CoreEnumerations.h" />
+    <ClInclude Include="GameEnumeration.h" />
     <ClInclude Include="GameLevel.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Level.h" />

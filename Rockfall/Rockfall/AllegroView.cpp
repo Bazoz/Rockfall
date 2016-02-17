@@ -84,7 +84,7 @@ void AllegroView::Initialize(int width, int height)
 
 	al_set_target_bitmap(al_get_backbuffer(display));
 
-
+	
 	
 	al_register_event_source(eventQueue, al_get_timer_event_source(timer)); 
 	al_register_event_source(eventQueue, al_get_display_event_source(display));
