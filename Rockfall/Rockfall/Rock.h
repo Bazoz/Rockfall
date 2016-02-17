@@ -4,6 +4,7 @@
 
 class Rock
 {
+
 	int ID;
 	int x;
 	int y;
