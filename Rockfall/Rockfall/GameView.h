@@ -6,12 +6,6 @@
 class GameView : public BaseView
 {
 
-	ALLEGRO_BITMAP *settingsButtonNormal;
-	ALLEGRO_BITMAP *settingsButtonPushed;
-
-	ALLEGRO_BITMAP * settingButtonImage;
-	ALLEGRO_BITMAP * settingButtonImagePush;
-
 
 public:
 

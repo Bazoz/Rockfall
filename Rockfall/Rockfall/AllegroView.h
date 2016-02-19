@@ -5,6 +5,8 @@
 #include "CoreEnumerations.h"
 #include "SettingView.h"
 #include "Rock.h"
+#include "GameView.h"
+#include "LevelView.h"
 
 class AllegroView 
 {

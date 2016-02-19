@@ -96,6 +96,8 @@ void AllegroView::Initialize(int width, int height)
 	//currentView = new Setting(width, height, backgroundImage, mainFont);
 	views[(int)ViewType::MainMenu] = new MainMenuView(width, height) ;
 	views[(int)ViewType::SettingMenu] = new SettingMenu(width, height);
+	views[(int)ViewType::GameView] = new GameView(width, height);
+	views[(int)ViewType::LevelView] = new LevelView(width, height);
 	currentView = views[(int)ViewType::MainMenu];
 
 

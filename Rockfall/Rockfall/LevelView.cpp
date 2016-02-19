@@ -1,24 +1,32 @@
 #include "LevelView.h"
 
 
-LevelView::LevelView(int width, int height, Level* level)
+LevelView::LevelView(int width, int height)
 	:BaseView(width, height, backgroundImage)
 {
-	currentLevel = level;
+	
 	backgroundImage = al_load_bitmap("Resources/Images/Level.jpg");
 
 
 }
 
-//void LevelView::Update()
-//{
-//
-//}
-//
-//ViewType LevelView::CheckSwitchView(int x, int y)
-//{
-//
-//}
+ViewType LevelView::CheckSwitchView(int x, int y)
+{
+	viewState = ViewType::LevelView;
+	return viewState;
+}
+
+void LevelView::ShowMenu()
+{
+	viewState = ViewType::LevelView;
+}
+
+void LevelView::Update()
+{
+
+}
+
+
 
 
 LevelView::~LevelView()

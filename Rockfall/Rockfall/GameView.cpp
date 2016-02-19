@@ -27,7 +27,7 @@ void GameView::ShowMenu()
 void GameView::Update()
 {
 	al_draw_bitmap(backgroundImage, 0, 0, 0);
-	viewState = ViewType::GameView;
+	//viewState = ViewType::GameView;
 
 
 }
