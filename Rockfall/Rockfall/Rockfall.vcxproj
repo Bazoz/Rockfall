@@ -179,6 +179,7 @@
     <ClCompile Include="AllegroView.cpp" />
     <ClCompile Include="BaseView.cpp" />
     <ClCompile Include="GameLevel.cpp" />
+    <ClCompile Include="GameView.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelView.cpp" />
     <ClCompile Include="MainMenuView.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="CoreEnumerations.h" />
     <ClInclude Include="GameEnumeration.h" />
     <ClInclude Include="GameLevel.h" />
+    <ClInclude Include="GameView.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelView.h" />

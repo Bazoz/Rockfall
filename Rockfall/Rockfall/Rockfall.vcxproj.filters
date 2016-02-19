@@ -63,6 +63,9 @@
     <ClCompile Include="LevelView.cpp">
       <Filter>View</Filter>
     </ClCompile>
+    <ClCompile Include="GameView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="GameEnumeration.h">
       <Filter>GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="GameView.h">
+      <Filter>View</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

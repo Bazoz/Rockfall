@@ -13,8 +13,6 @@ class Rock
 	int bountx;
 	int bounty;
 
-	
-
 	const int NUM_ROCKS = 5;
 
 public:

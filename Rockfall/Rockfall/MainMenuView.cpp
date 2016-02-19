@@ -148,7 +148,7 @@ void MainMenuView::Update()
 		al_draw_bitmap(LevelButtonImagePush, 113, 551, 0);
 		if (LevelButtonTimeout > 0 && --LevelButtonTimeout <= 0)
 		{
-			viewState = ViewType::SettingMenu;
+			viewState = ViewType::LevelView;
 		}
 	}
 	else
@@ -163,7 +163,7 @@ void MainMenuView::Update()
 		al_draw_bitmap(PlayButtonImagePush, 94, 279, 0);
 		if (PlayButtonTimeout > 0 && --PlayButtonTimeout <= 0)
 		{
-			viewState = ViewType::SettingMenu;
+			viewState = ViewType::GameView;
 		}
 	}
 	else

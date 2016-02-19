@@ -5,6 +5,9 @@ LevelView::LevelView(int width, int height, Level* level)
 	:BaseView(width, height, backgroundImage)
 {
 	currentLevel = level;
+	backgroundImage = al_load_bitmap("Resources/Images/Level.jpg");
+
+
 }
 
 //void LevelView::Update()

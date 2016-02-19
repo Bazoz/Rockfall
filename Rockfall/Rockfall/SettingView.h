@@ -4,6 +4,8 @@
 
 class SettingMenu: public BaseView 
 {
+
+
 	ALLEGRO_BITMAP *settingsButtonNormal;
 	ALLEGRO_BITMAP *backButtonImagePused;
 
