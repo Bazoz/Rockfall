@@ -66,6 +66,9 @@
     <ClCompile Include="GameView.cpp">
       <Filter>View</Filter>
     </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>GameCore</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="GameView.h">
       <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>GameCore</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

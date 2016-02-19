@@ -10,7 +10,7 @@ AllegroView::AllegroView()
 	backgroundImage = nullptr;
 	bouncer_x = 0;
 	bouncer_y = 0;
-	views = new BaseView*[2];
+	views = new BaseView*[4];
 
 	fpsTimeout = 60;
 }
@@ -96,11 +96,13 @@ void AllegroView::Initialize(int width, int height)
 	//currentView = new Setting(width, height, backgroundImage, mainFont);
 	views[(int)ViewType::MainMenu] = new MainMenuView(width, height) ;
 	views[(int)ViewType::SettingMenu] = new SettingMenu(width, height);
-	views[(int)ViewType::GameView] = new GameView(width, height);
+	views[(int)ViewType::GameView] = new GameView(width, height, mainAtlas);
 	views[(int)ViewType::LevelView] = new LevelView(width, height);
 	currentView = views[(int)ViewType::MainMenu];
 
-
+	Level *firstLevel = new Level();
+	firstLevel->Initialize(2);
+	((GameView*)views[(int)ViewType::GameView])->SetLevel(firstLevel);
 }
 
 void AllegroView::StartGame()

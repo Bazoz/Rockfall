@@ -6,25 +6,19 @@ class Rock
 {
 
 	int ID;
-	int x;
-	int y;
+	float x;
+	float y;
 	bool live;
-	int speed;
+	float speed;
 	int bountx;
-	int bounty;
-
-	const int NUM_ROCKS = 5;
+	int bounty;	
 
 public:
 	Rock();
-
-	void InitRock(Rock rocks[], int size);
-	void DrawRock(Rock rocks[], int size);
-	void StartRock(Rock rocks[], int size);
-	void UpdateRock(Rock rocks[], int size);
-	
-
-
+	Rock(int x, int y, float speed);
+	int GetX() const;
+	int GetY() const;
+	void Move();
 	~Rock();
 };
 

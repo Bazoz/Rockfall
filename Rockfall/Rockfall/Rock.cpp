@@ -6,34 +6,35 @@ Rock::Rock()
 {
 }
 
-void Rock::InitRock(Rock rocks[], int size)
+Rock::Rock(int x, int y, float speed)
 {
-	for (int i = 0; i < size; i++)
-	{
-		//rocks[i].ID = ENEMY;
-		rocks[i].live = false;
-		rocks[i].speed = 5;
-		rocks[i].bountx = 18;
-		rocks[i].bounty = 18;
-
-	}
+	this->x = x;
+	this->y = y;
+	this->speed = speed;
 }
 
-void Rock::DrawRock(Rock rocks[], int size)
+int Rock::GetX() const
 {
-
+	return x;
 }
 
-void Rock::StartRock(Rock rocks[], int size)
+int Rock::GetY() const
 {
-
+	return y;
 }
 
-void Rock::UpdateRock(Rock rocks[], int size)
+int s = 0;
+
+void Rock::Move()
 {
+	s++;
+	x += s < 100 ? 0.5 : -0.5;
+	if (s > 200) s = 0;
+	float offset = x - 100;
+	y = 400 - ((offset * offset)/10);
 
+	cout << "x: " << x << "y: " << y << endl;
 }
-
 
 Rock::~Rock()
 {
