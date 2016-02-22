@@ -5,8 +5,8 @@ LevelView::LevelView(int width, int height)
 	:BaseView(width, height, backgroundImage)
 {
 	
-	backgroundImage = al_load_bitmap("Resources/Images/Level.jpg");
-
+	this->backgroundImage = al_load_bitmap("Resources/Images/Level.jpg");
+	
 
 }
 
@@ -23,7 +23,7 @@ void LevelView::ShowMenu()
 
 void LevelView::Update()
 {
-
+	al_draw_bitmap(backgroundImage, 0, 0, 0);
 }
 
 
@@ -34,7 +34,3 @@ LevelView::~LevelView()
 
 }
 
-//void LevelView::EventHandler(ALLEGRO_EVENT &ev)
-//{
-//	// Активаия кнопок
-//}

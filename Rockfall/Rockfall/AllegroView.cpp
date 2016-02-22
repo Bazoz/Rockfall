@@ -119,7 +119,7 @@ void AllegroView::StartGame()
 	while (true) //главный цыкл преложения
 	{
 		al_wait_for_event(eventQueue, &ev);
-		
+
 		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
 			bouncer_x = ev.mouse.x;

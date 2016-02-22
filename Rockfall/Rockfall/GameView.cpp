@@ -6,6 +6,8 @@ GameView::GameView(int width, int height, ALLEGRO_BITMAP* atlas)
 {
 	rockImage = al_create_sub_bitmap(atlas, 130, 590, 64, 59);
 	this->backgroundImage = al_load_bitmap("Resources/Images/Game.jpg");	
+
+
 }
 
 
