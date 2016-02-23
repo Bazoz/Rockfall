@@ -7,9 +7,9 @@ class LevelView : public BaseView
 
 	int skrolY = 0 ;
 
-	ALLEGRO_BITMAP *settingsButtonNormal;
-	ALLEGRO_BITMAP *backButtonImagePused;
-	ALLEGRO_BITMAP *atllasLevelMenu;
+	ALLEGRO_BITMAP * settingsButtonNormal;
+	ALLEGRO_BITMAP * backButtonImagePused;
+	ALLEGRO_BITMAP * atllasLevelMenu;
 
 	ALLEGRO_BITMAP * backButtonImage;
 	ALLEGRO_BITMAP * backButtonImagePush;
@@ -37,16 +37,21 @@ class LevelView : public BaseView
 	ALLEGRO_BITMAP * twoStars;
 	ALLEGRO_BITMAP * treeStars;
 
-
 	ALLEGRO_BITMAP * upMenuBackground;
-
 
 	int backButtonTimeout;
 	int upButtonTimeout;
 	int downButtonTimeout;
 	int level1Timeout;
-
-
+	int level2Timeout;
+	int level3Timeout;
+	int level4Timeout;
+	int level5Timeout;
+	int level6Timeout;
+	int level7Timeout;
+	int level8Timeout;
+	int level9Timeout;
+	int level10Timeout;
 
 	Level * currentLevel;
 
@@ -54,7 +59,7 @@ public:
 	LevelView(int width, int height);// GemeControl * control
 	virtual void Update();
 	ViewType CheckSwitchView(int x, int y);
-	//void EventHandler(ALLEGRO_EVENT &ev);
+
 	void ShowMenu();
 	~LevelView();
 
