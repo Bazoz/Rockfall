@@ -43,12 +43,16 @@ LevelView::LevelView(int width, int height)
 
 ViewType LevelView::CheckSwitchView(int x, int y)
 {
+
+	// нопка назад
 	if (x >= 15 && x <= 65 && y >= 9 && y <= 39)
 	{
 		backButtonTimeout = 7;
 		return ViewType::SettingMenu;
 	}
 
+
+	// нопки вниз и вверх
 	if (x >= 330 && x <= 371 && y >= 340 && y <= 397)
 	{
 		upButtonTimeout = 7;
@@ -69,13 +73,24 @@ ViewType LevelView::CheckSwitchView(int x, int y)
 		}
 		else skrolY -= 30;
 	}
+	//-----------------------------------------------
 
+	//ѕервый уровень
 	if (x >= 59 && x <= 90 && y >= 185 + skrolY && y <= 216 + skrolY)
 	{
-
 		level1Timeout = 7;
 			return ViewType::SettingMenu;
 	}
+
+
+	//¬торой уровень
+	if (x >= 198 && x <= 229 && y >= 223 + skrolY && y <= 254 + skrolY)
+	{
+		level2Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+
 
 
 	viewState = ViewType::LevelView;
@@ -91,8 +106,14 @@ void LevelView::Update()
 {
 	al_draw_bitmap(backgroundImage, 0, skrolY, 0);
 
-	al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
+	
 
+	//«везды
+	//starsView[(int)StarsView::Two] = new al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
+	al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
+	//-------
+
+	//”ровень
 	if (level1Timeout > 0)
 	{
 		al_draw_bitmap(level1, 59, 185 + skrolY, 0);
@@ -105,7 +126,22 @@ void LevelView::Update()
 	{
 		al_draw_bitmap(level1, 59, 185 + skrolY, 0);
 	}
+	//-------------------
 
+	//”ровень
+	if (level2Timeout > 0)
+	{
+		al_draw_bitmap(level2, 198, 223 + skrolY, 0);
+		if (--level2Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level2, 198, 223 + skrolY, 0);
+	}
+	//-------------------
 
 	al_draw_bitmap(upMenuBackground, 0, 0, 0);
 	//------------------------------------------------------
@@ -123,6 +159,8 @@ void LevelView::Update()
 	}
 	//---------------------------------------------------------
 
+
+	// нопки вниз вверх
 	if (upButtonTimeout > 0)
 	{
 		al_draw_bitmap(upButtonImagePush, 330, 340, 0);
@@ -140,7 +178,7 @@ void LevelView::Update()
 	{
 		al_draw_bitmap(downButtonImage, 330, 406, 0);
 	}
-
+	//-------------------------------------
 
 
 }

@@ -55,6 +55,8 @@ class LevelView : public BaseView
 
 	Level * currentLevel;
 
+	StarsView* starsView;
+
 public:
 	LevelView(int width, int height);// GemeControl * control
 	virtual void Update();
