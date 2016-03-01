@@ -90,8 +90,62 @@ ViewType LevelView::CheckSwitchView(int x, int y)
 		return ViewType::SettingMenu;
 	}
 
+	//3 уровень
+	if (x >= 317 && x <= 348 && y >= 299 + skrolY && y <= 330 + skrolY)
+	{
+		level3Timeout = 7;
+		return ViewType::SettingMenu;
+	}
 
 
+	//4 уровень
+	if (x >= 224 && x <= 255 && y >= 391 + skrolY && y <= 442 + skrolY)
+	{
+		level4Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//5 уровень
+	if (x >= 94 && x <= 125 && y >= 326 + skrolY && y <= 357 + skrolY)
+	{
+		level5Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//6 уровень
+	if (x >= 113 && x <= 144 && y >= 461 + skrolY && y <= 4692 + skrolY)
+	{
+		level6Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//7 уровень
+	if (x >= 299 && x <= 330 && y >= 498 + skrolY && y <= 529 + skrolY)
+	{
+		level7Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//8 уровень
+	if (x >= 293 && x <= 324 && y >= 606 + skrolY && y <= 637 + skrolY)
+	{
+		level8Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//9 уровень
+	if (x >= 161 && x <= 192 && y >= 588 + skrolY && y <= 619 + skrolY)
+	{
+		level9Timeout = 7;
+		return ViewType::SettingMenu;
+	}
+
+	//10 уровень
+	if (x >= 69 && x <= 100 && y >= 692 + skrolY && y <= 723 + skrolY)
+	{
+		level10Timeout = 7;
+		return ViewType::SettingMenu;
+	}
 
 	viewState = ViewType::LevelView;
 	return viewState;
@@ -113,7 +167,7 @@ void LevelView::Update()
 	al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
 	//-------
 
-	//Уровень
+	//Уровень 1
 	if (level1Timeout > 0)
 	{
 		al_draw_bitmap(level1, 59, 185 + skrolY, 0);
@@ -128,7 +182,7 @@ void LevelView::Update()
 	}
 	//-------------------
 
-	//Уровень
+	//Уровень 2
 	if (level2Timeout > 0)
 	{
 		al_draw_bitmap(level2, 198, 223 + skrolY, 0);
@@ -142,6 +196,127 @@ void LevelView::Update()
 		al_draw_bitmap(level2, 198, 223 + skrolY, 0);
 	}
 	//-------------------
+
+	//Уровень 3
+	if (level3Timeout > 0)
+	{
+		al_draw_bitmap(level3, 317, 299 + skrolY, 0);
+		if (--level3Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level3, 317, 299 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 4
+	if (level4Timeout > 0)
+	{
+		al_draw_bitmap(level4, 224, 391 + skrolY, 0);
+		if (--level4Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level4, 224, 391 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 5
+	if (level5Timeout > 0)
+	{
+		al_draw_bitmap(level5, 94, 326 + skrolY, 0);
+		if (--level5Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level5, 94, 326 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 6
+	if (level6Timeout > 0)
+	{
+		al_draw_bitmap(level6, 113, 461 + skrolY, 0);
+		if (--level6Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level6, 113, 461 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 7
+	if (level7Timeout > 0)
+	{
+		al_draw_bitmap(level7, 299, 498 + skrolY, 0);
+		if (--level7Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level7, 299, 498 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 8
+	if (level8Timeout > 0)
+	{
+		al_draw_bitmap(level8, 293, 606 + skrolY, 0);
+		if (--level8Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level8, 293, 606 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 9
+	if (level9Timeout > 0)
+	{
+		al_draw_bitmap(level9, 161, 588 + skrolY, 0);
+		if (--level9Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level9, 161, 588 + skrolY, 0);
+	}
+	//-------------------
+
+	//Уровень 10
+	if (level10Timeout > 0)
+	{
+		al_draw_bitmap(level10, 69, 692 + skrolY, 0);
+		if (--level10Timeout <= 0)
+		{
+			viewState = ViewType::MainMenu;
+		}
+	}
+	else
+	{
+		al_draw_bitmap(level10, 69, 692 + skrolY, 0);
+	}
+	//-------------------
+
 
 	al_draw_bitmap(upMenuBackground, 0, 0, 0);
 	//------------------------------------------------------

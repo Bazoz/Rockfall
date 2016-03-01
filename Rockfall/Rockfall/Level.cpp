@@ -21,10 +21,10 @@ void Level::Initialize(int rocksCount)
 
 void Level::CreateRock()
 {
-	Vector2 pos = spawnPoints[rand() % spawnPoints.size()];
-	//Rock r(pos.X, pos.Y, 5);
-	Rock r(100, 400, 5);
-	rocks.push(r);
+		Vector2 pos = spawnPoints[rand() % spawnPoints.size()];
+		//Rock r(pos.X, pos.Y, 5);
+		Rock r(100, 400, 5);
+		rocks.push(r);
 }
 
 void Level::Update()
