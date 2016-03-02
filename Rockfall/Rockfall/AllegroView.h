@@ -7,6 +7,7 @@
 #include "Rock.h"
 #include "GameView.h"
 #include "LevelView.h"
+#include "LevelManager.h"
 
 class AllegroView 
 {

@@ -122,6 +122,9 @@
     <ClInclude Include="Vector2.h">
       <Filter>GameCore</Filter>
     </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>GameCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,6 +1,7 @@
 #pragma once
 #include "BaseView.h"
 #include "Level.h"
+#include "LevelManager.h"
 
 class LevelView : public BaseView
 {

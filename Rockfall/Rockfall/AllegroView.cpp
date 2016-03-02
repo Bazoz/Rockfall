@@ -100,9 +100,7 @@ void AllegroView::Initialize(int width, int height)
 	views[(int)ViewType::LevelView] = new LevelView(width, height);
 	currentView = views[(int)ViewType::MainMenu];
 
-	Level *firstLevel = new Level();
-	firstLevel->Initialize(2);
-	((GameView*)views[(int)ViewType::GameView])->SetLevel(firstLevel);
+	// TODO: Create level list
 }
 
 void AllegroView::StartGame()
@@ -116,7 +114,7 @@ void AllegroView::StartGame()
 
 	al_convert_mask_to_alpha(mainAtlas, al_map_rgb(36, 255, 0));
 
-	while (true) //главный цыкл преложения
+	while (true) //главный цикл преложения
 	{
 		al_wait_for_event(eventQueue, &ev);
 
@@ -125,8 +123,11 @@ void AllegroView::StartGame()
 			bouncer_x = ev.mouse.x;
 			bouncer_y = ev.mouse.y;
 			
-			views[(int)currentView->CheckSwitchView(bouncer_x, bouncer_y)];
-			
+			ViewType view = currentView->CheckSwitchView(bouncer_x, bouncer_y);			
+			if (view == ViewType::GameView)
+			{				
+				((GameView*)views[(int)ViewType::GameView])->SetLevel(LevelManager::GetCurrentLevel());
+			}
 		}
 
 		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueue))
