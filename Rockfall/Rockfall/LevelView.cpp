@@ -79,22 +79,25 @@ ViewType LevelView::CheckSwitchView(int x, int y)
 	if (x >= 59 && x <= 90 && y >= 185 + skrolY && y <= 216 + skrolY)
 	{
 		level1Timeout = 7;
-			return ViewType::SettingMenu;
+		LevelManager::SetCurrentLevel(1);
+		viewState = ViewType::GameView;
+		return ViewType::GameView;
 	}
 
 
 	//Второй уровень
 	if (x >= 198 && x <= 229 && y >= 223 + skrolY && y <= 254 + skrolY)
 	{
-		level2Timeout = 7;
-		return ViewType::SettingMenu;
+		level2Timeout = 7;		
+		viewState = ViewType::GameView;
+		return ViewType::GameView;
 	}
 
 	//3 уровень
 	if (x >= 317 && x <= 348 && y >= 299 + skrolY && y <= 330 + skrolY)
 	{
 		level3Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 
@@ -102,49 +105,49 @@ ViewType LevelView::CheckSwitchView(int x, int y)
 	if (x >= 224 && x <= 255 && y >= 391 + skrolY && y <= 442 + skrolY)
 	{
 		level4Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//5 уровень
 	if (x >= 94 && x <= 125 && y >= 326 + skrolY && y <= 357 + skrolY)
 	{
 		level5Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//6 уровень
 	if (x >= 113 && x <= 144 && y >= 461 + skrolY && y <= 4692 + skrolY)
 	{
 		level6Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//7 уровень
 	if (x >= 299 && x <= 330 && y >= 498 + skrolY && y <= 529 + skrolY)
 	{
 		level7Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//8 уровень
 	if (x >= 293 && x <= 324 && y >= 606 + skrolY && y <= 637 + skrolY)
 	{
 		level8Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//9 уровень
 	if (x >= 161 && x <= 192 && y >= 588 + skrolY && y <= 619 + skrolY)
 	{
 		level9Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	//10 уровень
 	if (x >= 69 && x <= 100 && y >= 692 + skrolY && y <= 723 + skrolY)
 	{
 		level10Timeout = 7;
-		return ViewType::SettingMenu;
+		return ViewType::GameView;
 	}
 
 	viewState = ViewType::LevelView;

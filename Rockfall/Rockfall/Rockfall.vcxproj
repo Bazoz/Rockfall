@@ -201,6 +201,7 @@
     <ClInclude Include="GameView.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="LevelView.h" />
     <ClInclude Include="MainMenuView.h" />
     <ClInclude Include="Player.h" />
