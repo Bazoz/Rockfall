@@ -165,6 +165,25 @@ void LevelView::Update()
 	//Звезды
 	//starsView[(int)StarsView::Two] = new al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
 	al_draw_bitmap(twoStars, 45,159+ skrolY, 0);
+
+	al_draw_bitmap(nonStars, 184, 196 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 303, 273 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 210, 364 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 80, 229 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 99, 434 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 285, 471 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 279, 579 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 147, 562 + skrolY, 0);
+
+	al_draw_bitmap(nonStars, 55, 666 + skrolY, 0);
+
 	//-------
 
 	//Уровень 1
