@@ -101,6 +101,7 @@ void AllegroView::Initialize(int width, int height)
 	currentView = views[(int)ViewType::MainMenu];
 
 	// TODO: Create level list
+	LevelManager::InitLevelManager();
 }
 
 void AllegroView::StartGame()

@@ -8,7 +8,7 @@ class LevelManager
 	static int currentLevel;
 
 public:
-	LevelManager();
+	static void InitLevelManager();
 	static void SetCurrentLevel(int number);
 	static Level* GetCurrentLevel();
 };

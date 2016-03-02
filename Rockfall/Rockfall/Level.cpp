@@ -2,6 +2,14 @@
 
 Level::Level()
 {
+	MaxRock = SpeedRock = 0;
+	OneStars = TwoStars = TreeStars = 0;
+}
+
+
+Level::Level(float maxRock, float speedRock, int oneStars, int twoStars, int treeStars)
+
+{
 	Vector2 p1(74, 240);
 	Vector2 p2(210, 261);
 	Vector2 p3(339, 267);
@@ -29,7 +37,7 @@ void Level::CreateRock()
 
 void Level::Update()
 {
-	list<Rock>::iterator i = visibleRocks.begin();
+	/*list<Rock>::iterator i = visibleRocks.begin();
 	while (i != visibleRocks.end())
 	{
 		i->Move();
@@ -40,13 +48,26 @@ void Level::Update()
 	{		
 		visibleRocks.push_back(rocks.front());
 		rocks.pop();
-	}
+	}*/
 }
 
 list<Rock>* Level::GetRocks()
 {
 	return &visibleRocks;
 }
+
+//float Level::MoveSpeedRock(float speed)
+//{
+//	if (true)
+//	{
+//
+//	}
+//
+//	this->Speed = speed;
+//	return Speed;
+//}
+
+
 
 Level::~Level()
 {
