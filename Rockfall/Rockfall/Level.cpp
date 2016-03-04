@@ -7,9 +7,14 @@ Level::Level()
 }
 
 
-Level::Level(float maxRock, float speedRock, int oneStars, int twoStars, int treeStars)
-
+Level::Level(int maxRock, float speedRock, int oneStars, int twoStars, int threeStars)
 {
+	MaxRock = maxRock;
+	SpeedRock = speedRock;
+	OneStars = oneStars;
+	TwoStars = twoStars;
+	TreeStars = threeStars;
+
 	Vector2 p1(74, 240);
 	Vector2 p2(210, 261);
 	Vector2 p3(339, 267);
@@ -17,10 +22,13 @@ Level::Level(float maxRock, float speedRock, int oneStars, int twoStars, int tre
 	spawnPoints.push_back(p1);
 	spawnPoints.push_back(p2);
 	spawnPoints.push_back(p3);
+
+	Initialize();
 }
 
-void Level::Initialize(int rocksCount)
+void Level::Initialize()
 {
+	int rocksCount = MaxRock;
 	while (--rocksCount >= 0)
 	{
 		CreateRock();
@@ -30,14 +38,14 @@ void Level::Initialize(int rocksCount)
 void Level::CreateRock()
 {
 		Vector2 pos = spawnPoints[rand() % spawnPoints.size()];
-		//Rock r(pos.X, pos.Y, 5);
-		Rock r(100, 400, 5);
+		//Rock r(pos.X, pos.Y, SpeedRock);
+		Rock r(100, 400, SpeedRock);
 		rocks.push(r);
 }
 
 void Level::Update()
 {
-	/*list<Rock>::iterator i = visibleRocks.begin();
+	list<Rock>::iterator i = visibleRocks.begin();
 	while (i != visibleRocks.end())
 	{
 		i->Move();
@@ -48,7 +56,7 @@ void Level::Update()
 	{		
 		visibleRocks.push_back(rocks.front());
 		rocks.pop();
-	}*/
+	}
 }
 
 list<Rock>* Level::GetRocks()

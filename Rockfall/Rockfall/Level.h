@@ -13,12 +13,15 @@ class Level
 
 	float Speed;
 
-	float MaxRock;
+	int MaxRock;
 	float SpeedRock;
 	int OneStars;
 	int TwoStars;
 	int TreeStars;
 
+	
+	void Initialize();
+	
 	/*void InitRock(Rock rocks[], int size);
 	void DrawRock(Rock rocks[], int size);
 	void StartRock(Rock rocks[], int size);
@@ -28,8 +31,8 @@ public:
 	
 
 	Level();
-	Level(float maxRock, float speedRock, int oneStars, int twoStars, int treeStars);
-	void Initialize(int rocksCount);
+	Level(int maxRock, float speedRock, int oneStars, int twoStars, int treeStars);
+	
 	void Update();
 	list<Rock>* GetRocks();
 
