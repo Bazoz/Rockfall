@@ -80,6 +80,8 @@ ViewType LevelView::CheckSwitchView(int x, int y)
 	{
 		level1Timeout = 7;
 		LevelManager::SetCurrentLevel(1);
+
+
 		viewState = ViewType::GameView;
 		return ViewType::GameView;
 	}

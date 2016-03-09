@@ -6,18 +6,26 @@ class Rock
 {
 
 	int ID;
-	float x;
-	float y;
-	bool live;
-	float speed;
-	int bountx;
-	int bounty;	
+	int X;
+	int Y;
+	bool Live;
+	float Speed;
+	int Bountx;
+	int Bounty;	
 
 public:
 	Rock();
 	Rock(int x, int y, float speed);
 	int GetX() const;
 	int GetY() const;
+	//int GetID() const;
+	//bool GetLive() const;
+	//float GetSpeed() const;
+	//int GetBountx() const;
+	//int GetBounty() const;
+
+
+
 	void Move();
 	~Rock();
 };

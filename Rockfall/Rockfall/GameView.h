@@ -8,6 +8,13 @@ class GameView : public BaseView
 	ALLEGRO_BITMAP * rockImage;
 	Level* level;
 
+	ALLEGRO_BITMAP * settingsButtonNormal;
+	ALLEGRO_BITMAP * backButtonImage;
+	ALLEGRO_BITMAP * backButtonImagePush;
+
+
+	int backButtonTimeout;
+
 	void DrawRock(Rock& rock);
 
 public:
