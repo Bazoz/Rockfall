@@ -56,7 +56,7 @@ void Level::Update()
 	while (i != visibleRocks.end())
 	{  
 
-		
+
 		i->Move();
 		i++;
 	}
@@ -86,7 +86,10 @@ list<Rock>* Level::GetRocks()
 //	return Speed;
 //}
 
+   
 
+
+   
 
 Level::~Level()
 {
