@@ -54,7 +54,9 @@ void Level::Update()
 {
 	list<Rock>::iterator i = visibleRocks.begin();
 	while (i != visibleRocks.end())
-	{
+	{  
+
+		
 		i->Move();
 		i++;
 	}
